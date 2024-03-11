@@ -1,3 +1,4 @@
+name: Label Issue
 on:
   issues:
     types: [opened]
