@@ -1,7 +1,6 @@
 package com.mm.app.service.impl;
 
 import com.mm.app.exception.EntityExistsException;
-import com.mm.app.exception.EntityExistsException;
 import com.mm.app.exception.InvalidEntityException;
 import com.mm.app.model.User;
 import com.mm.app.repository.UserRepository;
