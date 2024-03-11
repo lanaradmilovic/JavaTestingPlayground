@@ -7,3 +7,4 @@ jobs:
       - run: echo "This is automatically triggered job by ${{ github.event_name }}"
       - run: echo "OS is ${{ runner.os }}"
       - run: echo "URL is ${{ vars.URL }}"
+      - run: echo "Branch is ${{ github.ref }} on repository ${{ github.repository }}"
