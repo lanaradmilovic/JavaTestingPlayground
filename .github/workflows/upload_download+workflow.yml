@@ -1,0 +1,24 @@
+name: Upload and Download Workflow
+on: [push]
+jobs:
+  save-job:
+    runs-on: ubuntu-latest
+    name: Save output
+    steps:
+      - shell: bash
+        run: |
+          expr 5 + 5 -> output.txt
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name : output-log-file
+          path: output.txt
+  download-job:
+    runs-on: ubuntu-latest
+    needs: save-job
+    name: Download output
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: output-log-file
