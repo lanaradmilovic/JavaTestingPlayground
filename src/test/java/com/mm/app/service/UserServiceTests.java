@@ -23,7 +23,6 @@ public class UserServiceTests {
     @MockBean
     private UserRepository userRepository;
 
-    @Disabled
     @Test
     public void saveSuccessTest() throws EntityExistsException{
         User user = new User(1L, "Lana", "Radmilovic", "lana@gmail.com", "pass");

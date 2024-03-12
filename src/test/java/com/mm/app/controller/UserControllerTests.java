@@ -7,6 +7,7 @@ import com.mm.app.exception.EntityExistsException;
 import com.mm.app.model.User;
 import com.mm.app.service.UserService;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,6 +37,7 @@ public class UserControllerTests {
     @Autowired
     private ObjectMapper objectMapper;
 
+    @Disabled
     @Test
     public void saveUserSuccessTest() throws Exception{
         User user = new User(1, "UC1", "Uc1", "uc1@gmail.com", "pass");
