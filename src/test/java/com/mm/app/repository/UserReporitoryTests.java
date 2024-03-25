@@ -35,6 +35,11 @@ public class UserReporitoryTests {
         Assertions.assertTrue(u.isPresent());
         Assertions.assertEquals(user, u.get());
     }
-
+    @Test
+    public void findByEmailFailureTest() {
+        User user = new User(3, "Lana", "Radmilovic", "lana@gamil.com", "lr");
+        Optional<User> u = userRepository.findByEmail(user.getEmail());
+        Assertions.assertTrue(u.isEmpty());
+    }
 
 }
